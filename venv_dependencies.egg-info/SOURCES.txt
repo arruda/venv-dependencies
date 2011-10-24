@@ -1,4 +1,5 @@
 setup.py
+venv_dependencies/__init__.py
 venv_dependencies/venv_dep_utils.py
 venv_dependencies.egg-info/PKG-INFO
 venv_dependencies.egg-info/SOURCES.txt

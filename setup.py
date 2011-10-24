@@ -15,7 +15,7 @@ data_files = ['README.rst']
 
 setup(
     name = "venv_dependencies",
-    version = "0.0.3",
+    version = "0.0.4",
     author = "Felipe Arruda Pontes",
     author_email = "contato@arruda.blog.br",
     description = ("Easy to install any dependencies in a virtualenviroment(without making symlinks by hand and etc...)"),

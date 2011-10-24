@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: venv-dependencies
-Version: 0.0.3
+Version: 0.0.4
 Summary: Easy to install any dependencies in a virtualenviroment(without making symlinks by hand and etc...)
 Home-page: https://github.com/arruda/venv-dependencies
 Author: Felipe Arruda Pontes
