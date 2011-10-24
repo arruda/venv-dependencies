@@ -1,0 +1,7 @@
+setup.py
+venv_dependencies/venv_dep_utils.py
+venv_dependencies.egg-info/PKG-INFO
+venv_dependencies.egg-info/SOURCES.txt
+venv_dependencies.egg-info/dependency_links.txt
+venv_dependencies.egg-info/top_level.txt
+venv_dependencies/bin/link_venv.py

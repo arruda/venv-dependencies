@@ -6,7 +6,7 @@ This file should be running under the original python,
 not an env one
 """
 import sys
-from venv_dep_utils import *
+from venv_dependencies.venv_dep_utils import *
 
 def main(modules):
     venv = get_active_venv()

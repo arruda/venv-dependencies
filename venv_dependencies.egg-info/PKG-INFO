@@ -1,0 +1,39 @@
+Metadata-Version: 1.0
+Name: venv-dependencies
+Version: 0.0.3
+Summary: Easy to install any dependencies in a virtualenviroment(without making symlinks by hand and etc...)
+Home-page: https://github.com/arruda/venv-dependencies
+Author: Felipe Arruda Pontes
+Author-email: contato@arruda.blog.br
+License: MIT
+Description: ===================================
+        Virtual Enviroment Dependencies
+        ===================================
+        
+        About:
+        -----------------------------------
+        
+        This app helps to create symbolics links for any module from your original python to your current virtual enviroment.
+        This way you don't need to do the links by your self using bash, just use this app.
+        
+        
+        Usage:
+        -----------------------------------
+        You use the command::
+        
+            link_venv "module1" "module2"... "moduleN"
+        
+        Install:
+        -----------------------------------
+        pip install -e git+https://github.com/arruda/venv-dependencies.git#egg=venv_dependencies
+        
+        
+        License:
+        -----------------------------------
+        This software is distributed using MIT license, see LICENSE file for more details.
+        
+Keywords: virtualenv dependencies
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
