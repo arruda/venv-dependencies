@@ -46,10 +46,11 @@ def create_symlink(module_path, sitepackage_path):
     
     try:
         os.symlink(module_path, os.path.join(sitepackage_path,m_folder))
-        print os.path.join(sitepackage_path,m_folder)
+        return True
     except OSError:
-        pass
-    
+        print "Module already linked"
+        pass    
+    return False
 def change_easy_install_pth(easy_install_file,module_folder):
     """Change the easy-install.pth to add a new line mapping this new module.
     """

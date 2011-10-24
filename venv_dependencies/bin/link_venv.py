@@ -22,12 +22,10 @@ def main(modules):
         if m_path is None:
             #should raise an exception?
             continue
-        create_symlink(m_path,site_path)        
-
-        m_folder = get_module_folder(m_path)
-        change_easy_install_pth(easy_install_file, m_folder)
-
-        print "Module: %s has been linked."%m
+        if create_symlink(m_path,site_path):    
+            m_folder = get_module_folder(m_path)
+            change_easy_install_pth(easy_install_file, m_folder)
+            print "Module: %s has been linked."%m
 
 if __name__ == "__main__":
     modules = sys.argv[1:]

@@ -14,6 +14,10 @@ Usage:
 You use the command::
 
     link_venv "module1" "module2"... "moduleN"
+Ex:
+Enable pynotify to work in the virtualenv::
+
+    link_venv.py "gtk" "cairo" "gobject" "glib" "gio" "pango"
 
 Install:
 -----------------------------------
