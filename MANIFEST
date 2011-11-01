@@ -1,0 +1,6 @@
+LICENSE
+README.txt
+setup.py
+bin/link_venv.py
+venv_dependencies/__init__.py
+venv_dependencies/venv_dep_utils.py
