@@ -1,5 +1,5 @@
 LICENSE
-README.txt
+README.rst
 setup.py
 bin/link_venv.py
 venv_dependencies/__init__.py

@@ -1,2 +1,2 @@
-include bin/link_venv.py README.txt LICENSE
+include bin/link_venv.py README.rst LICENSE
 include venv_dependencies/*

@@ -3,7 +3,7 @@ from distutils.core import setup
 
 setup(
     name = "venv_dependencies",
-    version = "0.0.7",
+    version = "0.0.8",
     author = "Felipe Arruda Pontes",
     author_email = "contato@arruda.blog.br",
     description = ("Easy to install any dependencies in a virtualenviroment(without making symlinks by hand and etc...)"),
@@ -14,7 +14,7 @@ setup(
     scripts = ['bin/link_venv.py'],
     data_files = [],
     install_requires=['virtualenv'],
-    long_description=open('README.txt').read(),
+    long_description=open('README.rst').read(),
     classifiers=[
         "Development Status :: 4 - Beta",
         "Topic :: Utilities",
