@@ -1,0 +1,2 @@
+include bin/* README.txt LICENSE
+include venv_dependencies/*
