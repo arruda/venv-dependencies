@@ -21,7 +21,7 @@ Enable gtk to work in the virtualenv::
 
 Install:
 -----------------------------------
-pip install -e git+https://github.com/arruda/venv-dependencies.git#egg=venv_dependencies
+pip install -venv-dependencies
 
 
 License:
