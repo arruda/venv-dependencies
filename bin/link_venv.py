@@ -12,9 +12,8 @@ from venv_dependencies.venv_dep_utils import *
 def main(modules):
     venv = get_active_venv()
     if not venv:
-        print "No virtual envs"
-        #raise an exception here
-        return
+        raise SystemExit("No virtual envs")
+
     site_path = get_sitepackages_path(venv)
     easy_install_file = get_easy_install_pth(site_path)
 
