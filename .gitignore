@@ -1,1 +1,30 @@
-*pyc
+# crazy-compiler standard excludes
+/projectlogo.png
+/docs/_build/
+*.[1-9]
+
+# editor artefacts
+*~
+.#*
+\#*#
+.*.swp
+
+*.dll
+.idea
+
+# Python build artefacts
+/build/
+/dist/
+/_venv/
+*.py[cod]
+*.egg
+*.egg-info
+*.egg-link
+
+# OS generated files
+*.DS_[sS]Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+*.pid
+._.**~
