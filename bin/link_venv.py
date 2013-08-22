@@ -20,6 +20,7 @@ def main(modules):
     for m in modules:
         m_path = module_path(m)
         if m_path is None:
+            print 'Package not found:', m
             #should raise an exception?
             continue
         if create_symlink(m_path,site_path):
