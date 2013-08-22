@@ -5,12 +5,13 @@ Executes the methos in utils.py
 This file should be running under the original python,
 not an env one
 """
+
 import sys
 from venv_dependencies.venv_dep_utils import *
 
 def main(modules):
     venv = get_active_venv()
-    if venv is None:
+    if not venv:
         print "No virtual envs"
         #raise an exception here
         return
@@ -22,13 +23,13 @@ def main(modules):
         if m_path is None:
             #should raise an exception?
             continue
-        if create_symlink(m_path,site_path):    
+        if create_symlink(m_path,site_path):
             m_folder = get_module_folder(m_path)
             change_easy_install_pth(easy_install_file, m_folder)
             print "Module: %s has been linked." % m
 
 if __name__ == "__main__":
     modules = sys.argv[1:]
-    if modules != []:
+    if modules:
         main(modules)
-    
+

@@ -4,6 +4,7 @@
 Has the methods that tryes to import the modules and create symlinks for them
 in the venv sitepackages folder.
 """
+
 import os
 import fileinput
 from virtualenv import path_locations
@@ -11,7 +12,7 @@ from virtualenv import path_locations
 def get_active_venv():
     """Checks if there is a virtualenv active
     """
-    venv =os.environ.get('VIRTUAL_ENV',None)
+    venv = os.environ.get('VIRTUAL_ENV',None)
     return venv
 
 
@@ -25,7 +26,7 @@ def get_easy_install_pth(sitepackage_path):
     """Gets the path for the easy-install.pth
     """
     return os.path.join(sitepackage_path,'easy-install.pth')
-    
+
 def get_module_folder(module_path):
     """Gets the folder (tail) from the module_path
     """
@@ -33,7 +34,7 @@ def get_module_folder(module_path):
 
 def module_path(string):
     """Gets the path for the module name passed in the string.
-    """    
+    """
     try:
         return os.path.dirname(__import__(string).__file__)
     except ImportError:
@@ -43,14 +44,15 @@ def create_symlink(module_path, sitepackage_path):
     """Creates a symlinks for the module path to the sitepackage virtual env path
     """
     m_folder = get_module_folder(module_path)
-    
+
     try:
         os.symlink(module_path, os.path.join(sitepackage_path,m_folder))
         return True
     except OSError:
         print "Module already linked"
-        pass    
+        pass
     return False
+
 def change_easy_install_pth(easy_install_file,module_folder):
     """Change the easy-install.pth to add a new line mapping this new module.
     """
