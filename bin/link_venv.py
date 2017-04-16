@@ -5,31 +5,28 @@ Executes the methos in utils.py
 This file should be running under the original python,
 not an env one
 """
-
 import sys
-from venv_dependencies.venv_dep_utils import *
+from venv_dependencies.venv_dep_utils import (
+    get_active_venv,
+    get_sitepackages_path,
+    get_easy_install_pth,
+    link_module
+)
+
 
 def main(modules):
     venv = get_active_venv()
-    if not venv:
-        raise SystemExit("No virtual envs")
-
+    if venv is None:
+        print "No virtual envs"
+        return
     site_path = get_sitepackages_path(venv)
     easy_install_file = get_easy_install_pth(site_path)
 
     for m in modules:
-        m_path = module_path(m)
-        if m_path is None:
-            print 'Package not found:', m
-            #should raise an exception?
-            continue
-        if create_symlink(m_path,site_path):
-            m_folder = get_module_folder(m_path)
-            change_easy_install_pth(easy_install_file, m_folder)
-            print "Module: %s has been linked." % m
+        link_module(m, site_path, easy_install_file)
+
 
 if __name__ == "__main__":
     modules = sys.argv[1:]
-    if modules:
+    if modules != []:
         main(modules)
-
